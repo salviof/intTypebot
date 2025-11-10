@@ -14,16 +14,12 @@ import com.super_bits.modulosSB.SBCore.integracao.libRestClient.api.tipoModulos.
  * @author SalvioF
  */
 public enum FabConfigModuloTypebot implements ItfFabConfigModulo {
-    @InfoPropriedadeConfigRestIntegracao(tipoPropriedade = FabPropriedadeModuloIntegracaoOauth.URL_SERVIDOR_API)
-    URL_SERVIDOR_MAUTIC,
-    @InfoPropriedadeConfigRestIntegracao(tipoPropriedade = FabPropriedadeModuloIntegracaoOauth.URL_SERVIDOR_API_RECEPCAO_TOKEN_OAUTH)
-    URL_SERIVIDOR_CLIENTE,
-    @InfoPropriedadeConfigRestIntegracao(tipoPropriedade = FabPropriedadeModuloIntegracaoOauth.CHAVE_PUBLICA)
-    CHAVE_API_PUBLICA,
-    @InfoPropriedadeConfigRestIntegracao(tipoPropriedade = FabPropriedadeModuloIntegracaoOauth.CHAVE_PRIVADA)
-    CHAVE_API_PRIVADA;
 
-    @Override
+    @InfoPropriedadeConfigRestIntegracao(tipoPropriedade = FabPropriedadeModuloIntegracaoOauth.URL_SERVIDOR_API)
+    URL_SERIVIDOR,
+    @InfoPropriedadeConfigRestIntegracao(tipoPropriedade = FabPropriedadeModuloIntegracaoOauth.CHAVE_PRIVADA)
+    CHAVE_ACESSO;
+
     public String getValorPadrao() {
         return "Configure o arquivo de propriedades na pasta resources do seu projeto";
     }

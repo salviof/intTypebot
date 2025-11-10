@@ -19,14 +19,18 @@ import com.super_bits.modulosSB.SBCore.modulos.ManipulaArquivo.importacao.FabTip
  */
 @InfoConfigRestClientIntegracao(configuracao = FabConfigModuloTypebot.class,
         enderecosDocumentacao = "https://app.typebot.io/api/v1/",
-        nomeIntegracao = "clickup",
+        nomeIntegracao = "typebot",
         tipoAutenticacao = FabTipoAutenticacaoRest.OAUTHV2
 )
 public enum FabIntTypebotResultados implements ItfFabricaIntegracaoRest {
-    @InfoConsumoRestService(getPachServico = "/results/", tipoInformacaoRecebida = FabTipoArquivoImportacao.JSON,
+    @InfoConsumoRestService(getPachServico = "/results", tipoInformacaoRecebida = FabTipoArquivoImportacao.JSON,
             tipoConexao = FabTipoConexaoRest.GET,
             parametrosGet = "folder_id",
             adicionarAutenticacaoBearer = true)
     LISTAR_7_DIAS,
-    DADOS_FORMULARIO,;
+    @InfoConsumoRestService(getPachServico = "/results", tipoInformacaoRecebida = FabTipoArquivoImportacao.JSON,
+            tipoConexao = FabTipoConexaoRest.GET,
+            parametrosGet = "folder_id",
+            adicionarAutenticacaoBearer = true)
+    DADOS_RESULTADO;
 }
