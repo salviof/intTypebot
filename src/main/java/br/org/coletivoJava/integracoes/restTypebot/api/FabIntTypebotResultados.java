@@ -3,8 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.super_bits.Super_Bits.mktMauticIntegracao.regras_de_negocio_e_controller;
+package br.org.coletivoJava.integracoes.restTypebot.api;
 
+import com.super_bits.Super_Bits.intTypebot.config.FabConfigModuloTypebot;
 import com.super_bits.modulosSB.SBCore.integracao.libRestClient.WS.ItfFabricaIntegracaoRest;
 import com.super_bits.modulosSB.SBCore.integracao.libRestClient.WS.conexaoWebServiceClient.FabTipoConexaoRest;
 import com.super_bits.modulosSB.SBCore.integracao.libRestClient.WS.conexaoWebServiceClient.InfoConsumoRestService;

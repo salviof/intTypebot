@@ -6,15 +6,15 @@ import com.super_bits.modulosSB.SBCore.integracao.libRestClient.implementacao.Ac
 import com.super_bits.modulosSB.SBCore.integracao.libRestClient.api.FabTipoAgenteClienteApi;
 import com.super_bits.modulosSB.SBCore.modulos.objetos.registro.Interfaces.basico.ItfUsuario;
 
-@InfoIntegracaoRestTypebotResultados(tipo = FabIntTypebotResultados.LISTAR_7_DIAS)
-public class IntegracaoRestTypebotListar7Dias
+@InfoIntegracaoRestTypebotResultados(tipo = FabIntTypebotResultados.DADOS_RESULTADO)
+public class IntegracaoRestTypebotDadosResultado
 		extends
 			AcaoApiIntegracaoComOauthAbstrato {
 
-	public IntegracaoRestTypebotListar7Dias(
+	public IntegracaoRestTypebotDadosResultado(
 			final FabTipoAgenteClienteApi pTipoAgente,
 			final ItfUsuario pUsuario, final java.lang.Object... pParametro) {
-		super(FabIntTypebotResultados.LISTAR_7_DIAS, pTipoAgente, pUsuario,
+		super(FabIntTypebotResultados.DADOS_RESULTADO, pTipoAgente, pUsuario,
 				pParametro);
 	}
 }

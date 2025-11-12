@@ -1,7 +1,7 @@
 package br.org.coletivoJava.integracoes.restTypebot.api;
 
 import javax.inject.Qualifier;
-import com.super_bits.Super_Bits.mktMauticIntegracao.regras_de_negocio_e_controller.FabIntTypebotResultados;
+import br.org.coletivoJava.integracoes.restTypebot.api.FabIntTypebotResultados;
 import java.lang.annotation.Documented;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;

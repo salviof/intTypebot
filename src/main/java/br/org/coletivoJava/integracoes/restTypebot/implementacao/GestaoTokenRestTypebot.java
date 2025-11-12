@@ -1,14 +1,10 @@
 package br.org.coletivoJava.integracoes.restTypebot.implementacao;
 
 import br.org.coletivoJava.integracoes.restTypebot.api.InfoIntegracaoRestTypebotResultados;
-import com.super_bits.Super_Bits.mktMauticIntegracao.regras_de_negocio_e_controller.FabIntTypebotResultados;
-import com.super_bits.Super_Bits.mktMauticIntegracao.regras_de_negocio_e_controller.FabConfigModuloTypebot;
-import com.super_bits.modulosSB.SBCore.integracao.libRestClient.WS.ItfFabricaIntegracaoRest;
-import com.super_bits.modulosSB.SBCore.integracao.libRestClient.implementacao.gestaoToken.GestaoTokenOath2;
+import br.org.coletivoJava.integracoes.restTypebot.api.FabIntTypebotResultados;
+import com.super_bits.Super_Bits.intTypebot.config.FabConfigModuloTypebot;
 import com.super_bits.modulosSB.SBCore.integracao.libRestClient.api.token.ItfTokenDeAcessoExterno;
-import jakarta.json.JsonObject;
 import com.super_bits.modulosSB.SBCore.integracao.libRestClient.api.FabTipoAgenteClienteApi;
-import com.super_bits.modulosSB.SBCore.integracao.libRestClient.api.token.TokenDeAcessoExternoDinamico;
 import com.super_bits.modulosSB.SBCore.integracao.libRestClient.api.token.TokenDeAcessoExternoSimples;
 import com.super_bits.modulosSB.SBCore.integracao.libRestClient.implementacao.gestaoToken.GestaoTokenChaveUnica;
 import com.super_bits.modulosSB.SBCore.modulos.objetos.registro.Interfaces.basico.ItfUsuario;
@@ -16,8 +12,8 @@ import com.super_bits.modulosSB.SBCore.modulos.objetos.registro.Interfaces.basic
 @InfoIntegracaoRestTypebotResultados(tipo = FabIntTypebotResultados.LISTAR_7_DIAS)
 public class GestaoTokenRestTypebot extends GestaoTokenChaveUnica {
 
-    public GestaoTokenRestTypebot(Class<? extends ItfFabricaIntegracaoRest> pClasseEndpoints, FabTipoAgenteClienteApi pTipoAgente, ItfUsuario pUsuario) {
-        super(pClasseEndpoints, pTipoAgente, pUsuario);
+    public GestaoTokenRestTypebot(FabTipoAgenteClienteApi pTipoAgente, ItfUsuario pUsuario) {
+        super(FabIntTypebotResultados.class, pTipoAgente, pUsuario);
     }
 
     @Override
