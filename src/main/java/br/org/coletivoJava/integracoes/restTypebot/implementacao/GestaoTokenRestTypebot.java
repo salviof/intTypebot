@@ -22,13 +22,16 @@ public class GestaoTokenRestTypebot extends GestaoTokenEstatico {
 
     @Override
     public boolean validarToken() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        if (getToken() == null) {
+            return false;
+        }
+        return getTokenCompleto().isTokenValido();
     }
 
     @Override
     public ItfTokenDeAcessoExterno loadTokenArmazenado() {
 //        String chave = ;
-
+        configuracoesAmbiente.getPropriedade(FabConfigModuloTypebot.CHAVE_ACESSO);
         return new TokenDeAcessoExternoSimples(configuracao.getPropriedade(FabConfigModuloTypebot.CHAVE_ACESSO));
 
     }
