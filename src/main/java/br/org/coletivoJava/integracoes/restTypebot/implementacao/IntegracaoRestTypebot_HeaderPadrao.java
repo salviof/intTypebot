@@ -4,10 +4,16 @@ import com.super_bits.modulosSB.SBCore.integracao.libRestClient.implementacao.Ac
 import com.super_bits.modulosSB.SBCore.integracao.libRestClient.api.transmissao_recepcao_rest_client.ItfAcaoApiRest;
 
 public class IntegracaoRestTypebot_HeaderPadrao
-		extends
-			AcaoApiIntegracaoHeaderBuilder {
+        extends
+        AcaoApiIntegracaoHeaderBuilder {
 
-	public IntegracaoRestTypebot_HeaderPadrao(final ItfAcaoApiRest pAcao) {
-		super(pAcao);
-	}
+    public IntegracaoRestTypebot_HeaderPadrao(final ItfAcaoApiRest pAcao) {
+        super(pAcao);
+    }
+
+    @Override
+    public void gerarHeaderPadrao() {
+        super.gerarHeaderPadrao(); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/OverriddenMethodBody
+    }
+
 }
