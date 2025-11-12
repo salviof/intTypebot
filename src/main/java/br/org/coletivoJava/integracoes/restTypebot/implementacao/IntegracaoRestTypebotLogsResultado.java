@@ -1,24 +1,22 @@
 package br.org.coletivoJava.integracoes.restTypebot.implementacao;
 
 import br.org.coletivoJava.integracoes.restTypebot.api.InfoIntegracaoRestTypebotResultados;
-<<<<<<< HEAD
-import br.org.coletivoJava.integracoes.restTypebot.api.FabIntTypebotResultados;
-=======
 import com.super_bits.Super_Bits.mktMauticIntegracao.regras_de_negocio_e_controller.FabIntTypebotResultados;
->>>>>>> 94a58671dd6836e1ec54949b8a96ce539e4866c7
+import com.super_bits.modulosSB.SBCore.integracao.libRestClient.api.token.ItfTokenGestao;
 import com.super_bits.modulosSB.SBCore.integracao.libRestClient.implementacao.AcaoApiIntegracaoComOauthAbstrato;
 import com.super_bits.modulosSB.SBCore.integracao.libRestClient.api.FabTipoAgenteClienteApi;
 import com.super_bits.modulosSB.SBCore.modulos.objetos.registro.Interfaces.basico.ItfUsuario;
 
-@InfoIntegracaoRestTypebotResultados(tipo = FabIntTypebotResultados.DADOS_RESULTADO)
-public class IntegracaoRestTypebotDadosResultado
+@InfoIntegracaoRestTypebotResultados(tipo = FabIntTypebotResultados.LOGS_RESULTADO)
+public class IntegracaoRestTypebotLogsResultado
 		extends
 			AcaoApiIntegracaoComOauthAbstrato {
 
-	public IntegracaoRestTypebotDadosResultado(
+	public IntegracaoRestTypebotLogsResultado(
 			final FabTipoAgenteClienteApi pTipoAgente,
 			final ItfUsuario pUsuario, final java.lang.Object... pParametro) {
-		super(FabIntTypebotResultados.DADOS_RESULTADO, pTipoAgente, pUsuario,
+		super(FabIntTypebotResultados.LOGS_RESULTADO, pTipoAgente, pUsuario,
 				pParametro);
 	}
+
 }

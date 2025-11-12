@@ -5,7 +5,6 @@
  */
 package com.super_bits.Super_Bits.mktMauticIntegracao.configAppp;
 
-import com.super_bits.modulosSB.SBCore.ConfigGeral.ConfiguradorCoreDeProjetoJarAbstrato;
 import com.super_bits.modulosSB.SBCore.ConfigGeral.ConfiguradorCoreModelSemPersistencia;
 import com.super_bits.modulosSB.SBCore.ConfigGeral.ItfConfiguracaoCoreCustomizavel;
 
@@ -23,9 +22,9 @@ import com.super_bits.modulosSB.SBCore.ConfigGeral.ItfConfiguracaoCoreCustomizav
  *
  * @author salvioF
  */
-public class ConfiguradorCoreTypebot extends ConfiguradorCoreModelSemPersistencia {
+public class ConfiguradorCoreTypebotIntegracao extends ConfiguradorCoreModelSemPersistencia {
 
-    public ConfiguradorCoreTypebot() {
+    public ConfiguradorCoreTypebotIntegracao() {
         setIgnorarConfiguracaoPermissoes(true);
         setIgnorarConfiguracaoAcoesDoSistema(true);
     }

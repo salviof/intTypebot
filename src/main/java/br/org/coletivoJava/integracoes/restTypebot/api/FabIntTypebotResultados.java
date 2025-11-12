@@ -19,19 +19,31 @@ import com.super_bits.modulosSB.SBCore.modulos.ManipulaArquivo.importacao.FabTip
  * @author SalvioF
  */
 @InfoConfigRestClientIntegracao(configuracao = FabConfigModuloTypebot.class,
-        enderecosDocumentacao = "https://app.typebot.io/api/v1/",
+        enderecosDocumentacao = "https://docs.typebot.io/api-reference/",
         nomeIntegracao = "typebot",
-        tipoAutenticacao = FabTipoAutenticacaoRest.OAUTHV2
+        tipoAutenticacao = FabTipoAutenticacaoRest.CHAVE_ACESSO_METODOLOGIA_PROPRIA
 )
 public enum FabIntTypebotResultados implements ItfFabricaIntegracaoRest {
-    @InfoConsumoRestService(getPachServico = "/results", tipoInformacaoRecebida = FabTipoArquivoImportacao.JSON,
+    @InfoConsumoRestService(getPachServico = "/v1/typebots/{0}/results?limit={1}&timeFilter=last7Days", tipoInformacaoRecebida = FabTipoArquivoImportacao.JSON,
             tipoConexao = FabTipoConexaoRest.GET,
-            parametrosGet = "folder_id",
-            adicionarAutenticacaoBearer = true)
+            parametrosGet = {"typebotId", "limit", "timeFilter", "cursor"},
+            adicionarAutenticacaoBearer = false,
+            urlDocumentacao = "https://docs.typebot.io/api-reference/results/list"
+    )
     LISTAR_7_DIAS,
-    @InfoConsumoRestService(getPachServico = "/results", tipoInformacaoRecebida = FabTipoArquivoImportacao.JSON,
+    @InfoConsumoRestService(getPachServico = "/v1/typebots/{0}/results/{1}", tipoInformacaoRecebida = FabTipoArquivoImportacao.JSON,
             tipoConexao = FabTipoConexaoRest.GET,
-            parametrosGet = "folder_id",
-            adicionarAutenticacaoBearer = true)
-    DADOS_RESULTADO;
+            parametrosGet = {"typebotId", "resultId"},
+            adicionarAutenticacaoBearer = true,
+            urlDocumentacao = "https://docs.typebot.io/api-reference/results/get"
+    )
+    DADOS_RESULTADO,
+    @InfoConsumoRestService(getPachServico = "/v1/typebots/{0}/results/{1}/logs", tipoInformacaoRecebida = FabTipoArquivoImportacao.JSON,
+            tipoConexao = FabTipoConexaoRest.GET,
+            parametrosGet = {"typebotId", "resultId"},
+            adicionarAutenticacaoBearer = true,
+            urlDocumentacao = "https://docs.typebot.io/api-reference/results/list-logs"
+    )
+    LOGS_RESULTADO;
+
 }

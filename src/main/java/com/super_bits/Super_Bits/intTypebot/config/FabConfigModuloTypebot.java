@@ -8,6 +8,7 @@ package com.super_bits.Super_Bits.intTypebot.config;
 import com.super_bits.modulosSB.SBCore.ConfigGeral.arquivosConfiguracao.ItfFabConfigModulo;
 import com.super_bits.modulosSB.SBCore.integracao.libRestClient.api.tipoModulos.integracaoOauth.FabPropriedadeModuloIntegracaoOauth;
 import com.super_bits.modulosSB.SBCore.integracao.libRestClient.api.tipoModulos.integracaoOauth.InfoPropriedadeConfigRestIntegracao;
+import com.super_bits.modulosSB.SBCore.modulos.ManipulaArquivo.RecursosExternosPorIndice;
 
 /**
  *
@@ -16,12 +17,21 @@ import com.super_bits.modulosSB.SBCore.integracao.libRestClient.api.tipoModulos.
 public enum FabConfigModuloTypebot implements ItfFabConfigModulo {
 
     @InfoPropriedadeConfigRestIntegracao(tipoPropriedade = FabPropriedadeModuloIntegracaoOauth.URL_SERVIDOR_API)
-    URL_SERIVIDOR,
+    URL_SERVIDOR,
     @InfoPropriedadeConfigRestIntegracao(tipoPropriedade = FabPropriedadeModuloIntegracaoOauth.CHAVE_PRIVADA)
     CHAVE_ACESSO;
+    public static final String NOME_INTEGRACAO = "intTypebot";
 
+
+    @Override
     public String getValorPadrao() {
-        return "Configure o arquivo de propriedades na pasta resources do seu projeto";
+        switch (this) {
+            case URL_SERVIDOR:
+            case CHAVE_ACESSO:
+                break;
+            default:
+                throw new AssertionError();
+        }
+        return "não definido";
     }
-
 }
