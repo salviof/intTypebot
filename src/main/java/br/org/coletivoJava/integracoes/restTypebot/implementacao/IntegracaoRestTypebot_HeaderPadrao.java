@@ -1,6 +1,5 @@
 package br.org.coletivoJava.integracoes.restTypebot.implementacao;
 
-import com.super_bits.Super_Bits.mktMauticIntegracao.regras_de_negocio_e_controller.FabConfigModuloTypebot;
 import com.super_bits.modulosSB.SBCore.integracao.libRestClient.implementacao.AcaoApiIntegracaoHeaderBuilder;
 import com.super_bits.modulosSB.SBCore.integracao.libRestClient.api.transmissao_recepcao_rest_client.ItfAcaoApiRest;
 
@@ -11,9 +10,15 @@ public class IntegracaoRestTypebot_HeaderPadrao
 		extends
 			AcaoApiIntegracaoHeaderBuilder {
 
-	public IntegracaoRestTypebot_HeaderPadrao(final ItfAcaoApiRest pAcao) {
-		super(pAcao);
-	}
+    public IntegracaoRestTypebot_HeaderPadrao(final ItfAcaoApiRest pAcao) {
+        super(pAcao);
+    }
+
+    @Override
+    public void gerarHeaderPadrao() {
+        super.gerarHeaderPadrao(); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/OverriddenMethodBody
+    }
+
 
     @Override
     public Map<String, String> getHeaderPadrao() {
