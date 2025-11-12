@@ -23,9 +23,9 @@ import com.super_bits.modulosSB.SBCore.ConfigGeral.ItfConfiguracaoCoreCustomizav
  *
  * @author salvioF
  */
-public class ConfiguradorCoremktMauticIntegracao extends ConfiguradorCoreModelSemPersistencia {
+public class ConfiguradorCoreTypebot extends ConfiguradorCoreModelSemPersistencia {
 
-    public ConfiguradorCoremktMauticIntegracao() {
+    public ConfiguradorCoreTypebot() {
         setIgnorarConfiguracaoPermissoes(true);
         setIgnorarConfiguracaoAcoesDoSistema(true);
     }
