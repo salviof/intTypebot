@@ -5,6 +5,8 @@
  */
 package com.super_bits.Super_Bits.mktMauticIntegracao.regras_de_negocio_e_controller;
 
+import br.org.coletivoJava.integracoes.restTypebot.api.FabIntTypebotResultados;
+import com.super_bits.Super_Bits.intTypebot.config.FabConfigModuloTypebot;
 import com.super_bits.Super_Bits.mktMauticIntegracao.configAppp.ConfiguradorCoreTypebotIntegracao;
 import com.super_bits.modulosSB.SBCore.ConfigGeral.SBCore;
 import org.junit.Test;

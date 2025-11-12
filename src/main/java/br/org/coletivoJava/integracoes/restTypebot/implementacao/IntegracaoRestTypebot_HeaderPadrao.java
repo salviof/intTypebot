@@ -1,15 +1,14 @@
 package br.org.coletivoJava.integracoes.restTypebot.implementacao;
 
-import com.super_bits.Super_Bits.mktMauticIntegracao.regras_de_negocio_e_controller.FabConfigModuloTypebot;
-import com.super_bits.modulosSB.SBCore.integracao.libRestClient.implementacao.AcaoApiIntegracaoHeaderBuilder;
+import com.super_bits.Super_Bits.intTypebot.config.FabConfigModuloTypebot;
 import com.super_bits.modulosSB.SBCore.integracao.libRestClient.api.transmissao_recepcao_rest_client.ItfAcaoApiRest;
-
+import com.super_bits.modulosSB.SBCore.integracao.libRestClient.implementacao.AcaoApiIntegracaoHeaderBuilder;
 import java.util.HashMap;
 import java.util.Map;
 
 public class IntegracaoRestTypebot_HeaderPadrao
-		extends
-			AcaoApiIntegracaoHeaderBuilder {
+        extends
+        AcaoApiIntegracaoHeaderBuilder {
 
     public IntegracaoRestTypebot_HeaderPadrao(final ItfAcaoApiRest pAcao) {
         super(pAcao);
@@ -19,7 +18,6 @@ public class IntegracaoRestTypebot_HeaderPadrao
     public void gerarHeaderPadrao() {
         super.gerarHeaderPadrao(); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/OverriddenMethodBody
     }
-
 
     @Override
     public Map<String, String> getHeaderPadrao() {
