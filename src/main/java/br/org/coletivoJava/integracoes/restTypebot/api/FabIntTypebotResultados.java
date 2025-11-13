@@ -20,7 +20,7 @@ import com.super_bits.modulosSB.SBCore.modulos.ManipulaArquivo.importacao.FabTip
  */
 @InfoConfigRestClientIntegracao(configuracao = FabConfigModuloTypebot.class,
         enderecosDocumentacao = "https://docs.typebot.io/api-reference/",
-        nomeIntegracao = "typebot",
+        nomeIntegracao = FabConfigModuloTypebot.NOME_INTEGRACAO,
         tipoAutenticacao = FabTipoAutenticacaoRest.CHAVE_ACESSO_METODOLOGIA_PROPRIA
 )
 public enum FabIntTypebotResultados implements ItfFabricaIntegracaoRest {
@@ -44,6 +44,6 @@ public enum FabIntTypebotResultados implements ItfFabricaIntegracaoRest {
             adicionarAutenticacaoBearer = true,
             urlDocumentacao = "https://docs.typebot.io/api-reference/results/list-logs"
     )
-    LOGS_RESULTADO;
+    LOGS_RESULTADO
 
 }
