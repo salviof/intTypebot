@@ -1,26 +1,24 @@
 package br.org.coletivoJava.integracoes.restTypebot.implementacao;
 
-import br.org.coletivoJava.integracoes.restTypebot.api.FabIntTypebotResultados;
+import br.org.coletivoJava.integracoes.restTypebot.api.FabIntTypebotBots;
 import com.super_bits.Super_Bits.mktMauticIntegracao.configAppp.ConfiguradorCoreTypebotIntegracao;
 import com.super_bits.modulosSB.SBCore.ConfigGeral.SBCore;
 import com.super_bits.modulosSB.SBCore.integracao.libRestClient.WS.conexaoWebServiceClient.ItfRespostaWebServiceSimples;
-import junit.framework.TestCase;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
 
-public class IntegracaoRestTypebotDadosResultadoTest extends TestCase {
-    public IntegracaoRestTypebotDadosResultadoTest() {
+public class IntegracaoRestTypebotListarTodosTypebotsTest {
+    public IntegracaoRestTypebotListarTodosTypebotsTest() {
     }
 
-    private static final String TYPEBOT_ID = "jucnz25a466rfdw2gijf8bv6";
-    private static final String RESULT_ID = "cxgiriny267lvzsukeyb4zsx";
+    private static final String WORKSPACE_ID = "cletcoc1t0002o5kwrua8y3cw";
 
     @Test
     public void testSomeMethod() {
         SBCore.configurar(new ConfiguradorCoreTypebotIntegracao(), SBCore.ESTADO_APP.DESENVOLVIMENTO);
 
-        ItfRespostaWebServiceSimples resposta = FabIntTypebotResultados.DADOS_RESULTADO.getAcao(TYPEBOT_ID, RESULT_ID).getResposta();
+        ItfRespostaWebServiceSimples resposta = FabIntTypebotBots.LISTAR_TODOS_TYPEBOTS.getAcao(WORKSPACE_ID).getResposta();
         System.out.println(resposta);
         assertEquals(200, resposta.getCodigoResposta());
     }

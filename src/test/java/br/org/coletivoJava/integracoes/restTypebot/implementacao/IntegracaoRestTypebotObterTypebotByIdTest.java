@@ -1,35 +1,26 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/UnitTests/JUnit4TestClass.java to edit this template
- */
 package br.org.coletivoJava.integracoes.restTypebot.implementacao;
 
+import br.org.coletivoJava.integracoes.restTypebot.api.FabIntTypebotBots;
 import br.org.coletivoJava.integracoes.restTypebot.api.FabIntTypebotResultados;
 import com.super_bits.Super_Bits.mktMauticIntegracao.configAppp.ConfiguradorCoreTypebotIntegracao;
 import com.super_bits.modulosSB.SBCore.ConfigGeral.SBCore;
 import com.super_bits.modulosSB.SBCore.integracao.libRestClient.WS.conexaoWebServiceClient.ItfRespostaWebServiceSimples;
 import org.junit.Test;
-import static org.junit.Assert.*;
 
-/**
- *
- * @author salvio
- */
-public class IntegracaoRestTypebotListar7DiasTest {
+import static org.junit.Assert.assertEquals;
 
-    public IntegracaoRestTypebotListar7DiasTest() {
+public class IntegracaoRestTypebotObterTypebotByIdTest {
+    public IntegracaoRestTypebotObterTypebotByIdTest() {
     }
 
-    private static final String TYPEBOT_ID = "jucnz25a466rfdw2gijf8bv6";
-    private static final int LIMIT = 50;
+    private static final String TYPEBOT_ID = "cmemuavrf000jfp4tqcnnscdf";
 
     @Test
     public void testSomeMethod() {
         SBCore.configurar(new ConfiguradorCoreTypebotIntegracao(), SBCore.ESTADO_APP.DESENVOLVIMENTO);
 
-        ItfRespostaWebServiceSimples resposta = FabIntTypebotResultados.LISTAR_7_DIAS.getAcao(TYPEBOT_ID, LIMIT).getResposta();
+        ItfRespostaWebServiceSimples resposta = FabIntTypebotBots.OBTER_TYPEBOT_BY_ID.getAcao(TYPEBOT_ID).getResposta();
         System.out.println(resposta);
         assertEquals(200, resposta.getCodigoResposta());
     }
-
 }
