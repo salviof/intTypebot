@@ -9,14 +9,14 @@ import com.super_bits.modulosSB.SBCore.integracao.libRestClient.api.FabTipoAgent
 import com.super_bits.modulosSB.SBCore.integracao.libRestClient.api.token.ItfTokenDeAcessoExterno;
 import com.super_bits.modulosSB.SBCore.integracao.libRestClient.api.token.TokenDeAcessoExternoSimples;
 import com.super_bits.modulosSB.SBCore.integracao.libRestClient.implementacao.gestaoToken.GestaoTokenEstatico;
-import com.super_bits.modulosSB.SBCore.modulos.objetos.registro.Interfaces.basico.ItfUsuario;
+import com.super_bits.modulosSB.SBCore.modulos.objetos.registro.Interfaces.basico.ComoUsuario;
 
 @InfoIntegracaoRestTypebotResultados(tipo = FabIntTypebotResultados.LISTAR_7_DIAS)
 public class GestaoTokenRestTypebot extends GestaoTokenEstatico {
 
     public static ConfigModulo configuracao = SBCore.getConfigModulo(FabConfigModuloTypebot.class);
 
-    public GestaoTokenRestTypebot(FabTipoAgenteClienteApi pTipoAgente, ItfUsuario pUsuario) {
+    public GestaoTokenRestTypebot(FabTipoAgenteClienteApi pTipoAgente, ComoUsuario pUsuario) {
         super(FabIntTypebotResultados.class, pTipoAgente, pUsuario);
     }
 

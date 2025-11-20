@@ -4,7 +4,7 @@ import br.org.coletivoJava.integracoes.restTypebot.api.FabIntTypebotResultados;
 import br.org.coletivoJava.integracoes.restTypebot.api.InfoIntegracaoRestTypebotResultados;
 import com.super_bits.modulosSB.SBCore.integracao.libRestClient.api.FabTipoAgenteClienteApi;
 import com.super_bits.modulosSB.SBCore.integracao.libRestClient.implementacao.AcaoApiIntegracaoComOauthAbstrato;
-import com.super_bits.modulosSB.SBCore.modulos.objetos.registro.Interfaces.basico.ItfUsuario;
+import com.super_bits.modulosSB.SBCore.modulos.objetos.registro.Interfaces.basico.ComoUsuario;
 
 @InfoIntegracaoRestTypebotResultados(tipo = FabIntTypebotResultados.LISTAR_7_DIAS)
 public class IntegracaoRestTypebotListar7Dias
@@ -13,7 +13,7 @@ public class IntegracaoRestTypebotListar7Dias
 
     public IntegracaoRestTypebotListar7Dias(
             final FabTipoAgenteClienteApi pTipoAgente,
-            final ItfUsuario pUsuario, final java.lang.Object... pParametro) {
+            final ComoUsuario pUsuario, final java.lang.Object... pParametro) {
         super(FabIntTypebotResultados.LISTAR_7_DIAS, pTipoAgente, pUsuario,
                 pParametro);
     }
