@@ -4,7 +4,7 @@ import br.org.coletivoJava.integracoes.restTypebot.api.InfoIntegracaoRestTypebot
 import br.org.coletivoJava.integracoes.restTypebot.api.FabIntTypebotWorkspace;
 import com.super_bits.modulosSB.SBCore.integracao.libRestClient.implementacao.AcaoApiIntegracaoAbstrato;
 import com.super_bits.modulosSB.SBCore.integracao.libRestClient.api.FabTipoAgenteClienteApi;
-import com.super_bits.modulosSB.SBCore.modulos.objetos.registro.Interfaces.basico.ItfUsuario;
+import com.super_bits.modulosSB.SBCore.modulos.objetos.registro.Interfaces.basico.ComoUsuario;
 
 @InfoIntegracaoRestTypebotWorkspace(tipo = FabIntTypebotWorkspace.OBTER_WORKSPACE_BY_ID)
 public class IntegracaoRestTypebotObterWorkspaceById
@@ -13,7 +13,7 @@ public class IntegracaoRestTypebotObterWorkspaceById
 
 	public IntegracaoRestTypebotObterWorkspaceById(
 			final FabTipoAgenteClienteApi pTipoAgente,
-			final ItfUsuario pUsuario, final java.lang.Object... pParametro) {
+			final ComoUsuario pUsuario, final java.lang.Object... pParametro) {
 		super(FabIntTypebotWorkspace.OBTER_WORKSPACE_BY_ID, pTipoAgente,
 				pUsuario, pParametro);
 	}

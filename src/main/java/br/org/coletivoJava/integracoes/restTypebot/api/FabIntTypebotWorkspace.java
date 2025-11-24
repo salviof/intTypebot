@@ -1,7 +1,7 @@
 package br.org.coletivoJava.integracoes.restTypebot.api;
 
 import com.super_bits.Super_Bits.intTypebot.config.FabConfigModuloTypebot;
-import com.super_bits.modulosSB.SBCore.integracao.libRestClient.WS.ItfFabricaIntegracaoRest;
+import com.super_bits.modulosSB.SBCore.integracao.libRestClient.WS.ComoFabricaIntegracaoRest;
 import com.super_bits.modulosSB.SBCore.integracao.libRestClient.WS.conexaoWebServiceClient.FabTipoConexaoRest;
 import com.super_bits.modulosSB.SBCore.integracao.libRestClient.WS.conexaoWebServiceClient.InfoConsumoRestService;
 import com.super_bits.modulosSB.SBCore.integracao.libRestClient.api.servicoRegistrado.FabTipoAutenticacaoRest;
@@ -12,7 +12,7 @@ import com.super_bits.modulosSB.SBCore.modulos.ManipulaArquivo.importacao.FabTip
         nomeIntegracao = FabConfigModuloTypebot.NOME_INTEGRACAO,
         tipoAutenticacao = FabTipoAutenticacaoRest.CHAVE_ACESSO_METODOLOGIA_PROPRIA
 )
-public enum FabIntTypebotWorkspace implements ItfFabricaIntegracaoRest {
+public enum FabIntTypebotWorkspace implements ComoFabricaIntegracaoRest {
     @InfoConsumoRestService(getPachServico = "/v1/workspaces", tipoInformacaoRecebida = FabTipoArquivoImportacao.JSON,
             tipoConexao = FabTipoConexaoRest.GET,
             parametrosGet = {"workspaceId"},

@@ -13,7 +13,7 @@ public class IntegracaoRestTypebotObterTypebotByIdTest {
     public IntegracaoRestTypebotObterTypebotByIdTest() {
     }
 
-    private static final String TYPEBOT_ID = "cmemuavrf000jfp4tqcnnscdf";
+    private static final String TYPEBOT_ID = "cmhz5zzcj001yfp4tkuxcma8l";
 
     @Test
     public void testSomeMethod() {
