@@ -24,7 +24,7 @@ public class IntegracaoRestTypebot_HeaderPadrao
     @Override
     public Map<String, String> getHeaderPadrao() {
         Map<String, String> headerPadrao = new HashMap<>();
-        headerPadrao.put("Host", SBCore.getConfigModulo(FabConfigModuloTypebot.class).getPropriedade(FabConfigModuloTypebot.URL_HOST_SERVIDOOR));
+        //   headerPadrao.put("Host", SBCore.getConfigModulo(FabConfigModuloTypebot.class).getPropriedade(FabConfigModuloTypebot.URL_HOST_SERVIDOOR));
         headerPadrao.put("SEGREDO", SBCore.getConfigModulo(FabConfigModuloTypebot.class).getPropriedade(FabConfigModuloTypebot.CHAVE_ACESSO_SERVIDOR));
         headerPadrao.put("Authorization", "Bearer " + GestaoTokenRestTypebot.configuracao.getPropriedade(FabConfigModuloTypebot.CHAVE_ACESSO));
         return headerPadrao;

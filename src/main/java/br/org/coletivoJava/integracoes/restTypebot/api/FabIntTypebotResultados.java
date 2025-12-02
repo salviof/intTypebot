@@ -24,7 +24,7 @@ import com.super_bits.modulosSB.SBCore.modulos.ManipulaArquivo.importacao.FabTip
         tipoAutenticacao = FabTipoAutenticacaoRest.CHAVE_ACESSO_METODOLOGIA_PROPRIA
 )
 public enum FabIntTypebotResultados implements ComoFabricaIntegracaoRest {
-    @InfoConsumoRestService(getPachServico = "/v1/typebots/{0}/results?limit={1}&timeFilter=last7Days", tipoInformacaoRecebida = FabTipoArquivoImportacao.JSON,
+    @InfoConsumoRestService(getPachServico = "/api/v1/typebots/{0}/results?limit={1}&timeFilter=last7Days", tipoInformacaoRecebida = FabTipoArquivoImportacao.JSON,
             tipoConexao = FabTipoConexaoRest.GET,
             parametrosGet = {"typebotId", "limit", "timeFilter", "cursor"},
             adicionarAutenticacaoBearer = false,

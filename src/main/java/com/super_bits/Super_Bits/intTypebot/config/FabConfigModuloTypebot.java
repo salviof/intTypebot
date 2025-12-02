@@ -22,9 +22,8 @@ public enum FabConfigModuloTypebot implements ItfFabConfigModulo {
     @InfoPropriedadeConfigRestIntegracao(tipoPropriedade = FabPropriedadeModuloIntegracaoOauth.CHAVE_PRIVADA)
     CHAVE_ACESSO_SERVIDOR,
     @InfoPropriedadeConfigRestIntegracao(tipoPropriedade = FabPropriedadeModuloIntegracaoOauth.URL_SERVIDOR_API)
-    URL_HOST_SERVIDOOR;
+    WORKSPACE;
     public static final String NOME_INTEGRACAO = "typebot";
-
 
     @Override
     public String getValorPadrao() {
