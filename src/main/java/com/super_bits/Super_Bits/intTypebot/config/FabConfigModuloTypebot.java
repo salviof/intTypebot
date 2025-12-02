@@ -31,6 +31,7 @@ public enum FabConfigModuloTypebot implements ItfFabConfigModulo {
             case URL_SERVIDOR:
             case CHAVE_ACESSO:
             case CHAVE_ACESSO_SERVIDOR:
+            case WORKSPACE:
                 break;
             default:
                 throw new AssertionError();
