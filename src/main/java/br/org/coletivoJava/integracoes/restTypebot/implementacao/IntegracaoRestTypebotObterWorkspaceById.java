@@ -11,6 +11,7 @@ public class IntegracaoRestTypebotObterWorkspaceById
         extends
         AcaoApiIntegracaoAbstrato {
 
+<<<<<<< HEAD
     public IntegracaoRestTypebotObterWorkspaceById(
             final FabTipoAgenteClienteApi pTipoAgente,
             final ComoUsuario pUsuario, final java.lang.Object... pParametro) {
@@ -18,3 +19,12 @@ public class IntegracaoRestTypebotObterWorkspaceById
                 pUsuario, pParametro);
     }
 }
+=======
+	public IntegracaoRestTypebotObterWorkspaceById(
+			final FabTipoAgenteClienteApi pTipoAgente,
+			final ComoUsuario pUsuario, final java.lang.Object... pParametro) {
+		super(FabIntTypebotWorkspace.OBTER_WORKSPACE_BY_ID, pTipoAgente,
+				pUsuario, pParametro);
+	}
+}
+>>>>>>> a8938cd25995f1a631868fd114cec6dc035b1469

@@ -11,6 +11,7 @@ public class IntegracaoRestTypebotObterTypebotById
         extends
         AcaoApiIntegracaoAbstrato {
 
+<<<<<<< HEAD
     public IntegracaoRestTypebotObterTypebotById(
             final FabTipoAgenteClienteApi pTipoAgente,
             final ComoUsuario pUsuario, final java.lang.Object... pParametro) {
@@ -18,3 +19,12 @@ public class IntegracaoRestTypebotObterTypebotById
                 pParametro);
     }
 }
+=======
+	public IntegracaoRestTypebotObterTypebotById(
+			final FabTipoAgenteClienteApi pTipoAgente,
+			final ComoUsuario pUsuario, final java.lang.Object... pParametro) {
+		super(FabIntTypebotBots.OBTER_TYPEBOT_BY_ID, pTipoAgente, pUsuario,
+				pParametro);
+	}
+}
+>>>>>>> a8938cd25995f1a631868fd114cec6dc035b1469
