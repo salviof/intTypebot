@@ -12,7 +12,7 @@ public class FabIntTypebotWorkspaceTest extends TestesApiRest {
         try {
 
             SBCore.configurar(new ConfiguradorCoreTypebotIntegracao(), SBCore.ESTADO_APP.DESENVOLVIMENTO);
-            gerarCodigosChamadasEndpoint(FabIntTypebotWorkspace.class);
+            gerarCodigosChamadasEndpoint(FabApiRestTypebotWorkspace.class);
 
         } catch (Throwable t) {
             SBCore.RelatarErro(FabErro.SOLICITAR_REPARO, t.getMessage(), t);

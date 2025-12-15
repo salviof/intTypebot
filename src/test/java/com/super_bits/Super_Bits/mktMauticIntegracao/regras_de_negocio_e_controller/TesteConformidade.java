@@ -5,7 +5,7 @@
  */
 package com.super_bits.Super_Bits.mktMauticIntegracao.regras_de_negocio_e_controller;
 
-import br.org.coletivoJava.integracoes.restTypebot.api.FabIntTypebotResultados;
+import br.org.coletivoJava.integracoes.restTypebot.api.FabApiRestIntTypebotResultados;
 import com.super_bits.Super_Bits.intTypebot.config.FabConfigModuloTypebot;
 import com.super_bits.Super_Bits.mktMauticIntegracao.configAppp.ConfiguradorCoreTypebotIntegracao;
 import com.super_bits.modulosSB.SBCore.ConfigGeral.SBCore;
@@ -28,7 +28,7 @@ public class TesteConformidade extends TestesApiRest {
     public void testValues() {
         try {
             SBCore.configurar(new ConfiguradorCoreTypebotIntegracao(), SBCore.ESTADO_APP.DESENVOLVIMENTO);
-            gerarCodigosChamadasEndpoint(FabIntTypebotResultados.class);
+            gerarCodigosChamadasEndpoint(FabApiRestIntTypebotResultados.class);
             SBCore.getConfigModulo(FabConfigModuloTypebot.class);
 
         } catch (Throwable t) {

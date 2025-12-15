@@ -13,21 +13,19 @@ import com.super_bits.modulosSB.SBCore.modulos.ManipulaArquivo.importacao.FabTip
         nomeIntegracao = FabConfigModuloTypebot.NOME_INTEGRACAO,
         tipoAutenticacao = FabTipoAutenticacaoRest.CHAVE_ACESSO_METODOLOGIA_PROPRIA
 )
-public enum FabIntTypebotBots implements ComoFabricaIntegracaoRest {
-
-    @InfoConsumoRestService(getPachServico = "/v1/typebots?workspaceId={0}", tipoInformacaoRecebida = FabTipoArquivoImportacao.JSON,
+public enum FabApiRestTypebotWorkspace implements ComoFabricaIntegracaoRest {
+    @InfoConsumoRestService(getPachServico = "/api/v1/workspaces", tipoInformacaoRecebida = FabTipoArquivoImportacao.JSON,
             tipoConexao = FabTipoConexaoRest.GET,
             parametrosGet = {"workspaceId"},
             adicionarAutenticacaoBearer = true,
-            urlDocumentacao = "https://docs.typebot.io/api-reference/typebot/list"
+            urlDocumentacao = "https://docs.typebot.io/api-reference/workspace/list"
     )
-    LISTAR_TODOS_TYPEBOTS,
-    @InfoConsumoRestService(getPachServico = "/v1/typebots/{0}", tipoInformacaoRecebida = FabTipoArquivoImportacao.JSON,
+    LISTAR_TODOS_WORKSPACES,
+    @InfoConsumoRestService(getPachServico = "/api/v1/workspaces/{0}", tipoInformacaoRecebida = FabTipoArquivoImportacao.JSON,
             tipoConexao = FabTipoConexaoRest.GET,
-            parametrosGet = {"typebotId"},
+            parametrosGet = {"workspaceId"},
             adicionarAutenticacaoBearer = true,
-            urlDocumentacao = "https://docs.typebot.io/api-reference/typebot/get"
+            urlDocumentacao = "https://docs.typebot.io/api-reference/workspace/get"
     )
-    OBTER_TYPEBOT_BY_ID
-
+    OBTER_WORKSPACE_BY_ID
 }

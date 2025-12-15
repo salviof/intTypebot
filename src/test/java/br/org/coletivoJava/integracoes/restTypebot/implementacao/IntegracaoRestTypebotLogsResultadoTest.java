@@ -1,6 +1,6 @@
 package br.org.coletivoJava.integracoes.restTypebot.implementacao;
 
-import br.org.coletivoJava.integracoes.restTypebot.api.FabIntTypebotResultados;
+import br.org.coletivoJava.integracoes.restTypebot.api.FabApiRestIntTypebotResultados;
 import com.super_bits.Super_Bits.mktMauticIntegracao.configAppp.ConfiguradorCoreTypebotIntegracao;
 import com.super_bits.modulosSB.SBCore.ConfigGeral.SBCore;
 import com.super_bits.modulosSB.SBCore.integracao.libRestClient.WS.conexaoWebServiceClient.ItfRespostaWebServiceSimples;
@@ -20,7 +20,7 @@ public class IntegracaoRestTypebotLogsResultadoTest {
     public void testSomeMethod() {
         SBCore.configurar(new ConfiguradorCoreTypebotIntegracao(), SBCore.ESTADO_APP.DESENVOLVIMENTO);
 
-        ItfRespostaWebServiceSimples resposta = FabIntTypebotResultados.LOGS_RESULTADO.getAcao(TYPEBOT_ID, RESULT_ID).getResposta();
+        ItfRespostaWebServiceSimples resposta = FabApiRestIntTypebotResultados.LOGS_RESULTADO.getAcao(TYPEBOT_ID, RESULT_ID).getResposta();
         System.out.println(resposta);
         assertEquals(200, resposta.getCodigoResposta());
     }

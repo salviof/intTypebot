@@ -23,7 +23,7 @@ import com.super_bits.modulosSB.SBCore.modulos.ManipulaArquivo.importacao.FabTip
         nomeIntegracao = FabConfigModuloTypebot.NOME_INTEGRACAO,
         tipoAutenticacao = FabTipoAutenticacaoRest.CHAVE_ACESSO_METODOLOGIA_PROPRIA
 )
-public enum FabIntTypebotResultados implements ComoFabricaIntegracaoRest {
+public enum FabApiRestIntTypebotResultados implements ComoFabricaIntegracaoRest {
     @InfoConsumoRestService(getPachServico = "/api/v1/typebots/{0}/results?limit={1}&timeFilter=last7Days", tipoInformacaoRecebida = FabTipoArquivoImportacao.JSON,
             tipoConexao = FabTipoConexaoRest.GET,
             parametrosGet = {"typebotId", "limit", "timeFilter", "cursor"},
@@ -31,14 +31,14 @@ public enum FabIntTypebotResultados implements ComoFabricaIntegracaoRest {
             urlDocumentacao = "https://docs.typebot.io/api-reference/results/list"
     )
     LISTAR_7_DIAS,
-    @InfoConsumoRestService(getPachServico = "/v1/typebots/{0}/results/{1}", tipoInformacaoRecebida = FabTipoArquivoImportacao.JSON,
+    @InfoConsumoRestService(getPachServico = "/api/v1/typebots/{0}/results/{1}", tipoInformacaoRecebida = FabTipoArquivoImportacao.JSON,
             tipoConexao = FabTipoConexaoRest.GET,
             parametrosGet = {"typebotId", "resultId"},
             adicionarAutenticacaoBearer = true,
             urlDocumentacao = "https://docs.typebot.io/api-reference/results/get"
     )
     DADOS_RESULTADO,
-    @InfoConsumoRestService(getPachServico = "/v1/typebots/{0}/results/{1}/logs", tipoInformacaoRecebida = FabTipoArquivoImportacao.JSON,
+    @InfoConsumoRestService(getPachServico = "/api/v1/typebots/{0}/results/{1}/logs", tipoInformacaoRecebida = FabTipoArquivoImportacao.JSON,
             tipoConexao = FabTipoConexaoRest.GET,
             parametrosGet = {"typebotId", "resultId"},
             adicionarAutenticacaoBearer = true,

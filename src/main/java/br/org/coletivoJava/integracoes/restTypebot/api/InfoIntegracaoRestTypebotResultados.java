@@ -1,7 +1,7 @@
 package br.org.coletivoJava.integracoes.restTypebot.api;
 
 import javax.inject.Qualifier;
-import br.org.coletivoJava.integracoes.restTypebot.api.FabIntTypebotResultados;
+import br.org.coletivoJava.integracoes.restTypebot.api.FabApiRestIntTypebotResultados;
 import java.lang.annotation.Documented;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
@@ -14,5 +14,5 @@ import java.lang.annotation.ElementType;
 @Target(ElementType.TYPE)
 public @interface InfoIntegracaoRestTypebotResultados {
 
-	FabIntTypebotResultados tipo();
+	FabApiRestIntTypebotResultados tipo();
 }

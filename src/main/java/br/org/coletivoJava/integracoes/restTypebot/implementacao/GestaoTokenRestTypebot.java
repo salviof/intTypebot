@@ -1,6 +1,6 @@
 package br.org.coletivoJava.integracoes.restTypebot.implementacao;
 
-import br.org.coletivoJava.integracoes.restTypebot.api.FabIntTypebotResultados;
+import br.org.coletivoJava.integracoes.restTypebot.api.FabApiRestIntTypebotResultados;
 import br.org.coletivoJava.integracoes.restTypebot.api.InfoIntegracaoRestTypebotResultados;
 import com.super_bits.Super_Bits.intTypebot.config.FabConfigModuloTypebot;
 import com.super_bits.modulosSB.SBCore.ConfigGeral.SBCore;
@@ -11,13 +11,13 @@ import com.super_bits.modulosSB.SBCore.integracao.libRestClient.api.token.TokenD
 import com.super_bits.modulosSB.SBCore.integracao.libRestClient.implementacao.gestaoToken.GestaoTokenEstatico;
 import com.super_bits.modulosSB.SBCore.modulos.objetos.registro.Interfaces.basico.ComoUsuario;
 
-@InfoIntegracaoRestTypebotResultados(tipo = FabIntTypebotResultados.LISTAR_7_DIAS)
+@InfoIntegracaoRestTypebotResultados(tipo = FabApiRestIntTypebotResultados.LISTAR_7_DIAS)
 public class GestaoTokenRestTypebot extends GestaoTokenEstatico {
 
     public static ConfigModulo configuracao = SBCore.getConfigModulo(FabConfigModuloTypebot.class);
 
     public GestaoTokenRestTypebot(FabTipoAgenteClienteApi pTipoAgente, ComoUsuario pUsuario) {
-        super(FabIntTypebotResultados.class, pTipoAgente, pUsuario);
+        super(FabApiRestIntTypebotResultados.class, pTipoAgente, pUsuario);
     }
 
     @Override

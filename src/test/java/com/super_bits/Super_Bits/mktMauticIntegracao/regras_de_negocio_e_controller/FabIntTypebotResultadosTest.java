@@ -5,7 +5,7 @@
  */
 package com.super_bits.Super_Bits.mktMauticIntegracao.regras_de_negocio_e_controller;
 
-import br.org.coletivoJava.integracoes.restTypebot.api.FabIntTypebotResultados;
+import br.org.coletivoJava.integracoes.restTypebot.api.FabApiRestIntTypebotResultados;
 import com.super_bits.Super_Bits.mktMauticIntegracao.configAppp.ConfiguradorCoreTypebotIntegracao;
 import com.super_bits.modulosSB.SBCore.ConfigGeral.SBCore;
 import org.coletivojava.fw.api.tratamentoErros.FabErro;
@@ -27,7 +27,7 @@ public class FabIntTypebotResultadosTest extends TestesApiRest {
         try {
 
             SBCore.configurar(new ConfiguradorCoreTypebotIntegracao(), SBCore.ESTADO_APP.DESENVOLVIMENTO);
-            gerarCodigosChamadasEndpoint(FabIntTypebotResultados.class);
+            gerarCodigosChamadasEndpoint(FabApiRestIntTypebotResultados.class);
 
         } catch (Throwable t) {
             SBCore.RelatarErro(FabErro.SOLICITAR_REPARO, t.getMessage(), t);
